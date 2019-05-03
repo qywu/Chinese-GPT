@@ -1,0 +1,4 @@
+allennlp
+cupy
+pytorch-pretrained-bert
+tqdm

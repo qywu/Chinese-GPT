@@ -175,8 +175,7 @@ class TransformerLayer(nn.Module):
 class TransformerModel(nn.Module):
     def __init__(self):
         super().__init__()
-        layer = TransformerLayer()
-        self.layer = nn.ModuleList([copy.deepcopy(layer) for _ in range(12)])
+        self.layer = nn.ModuleList([TransformerLayer() for _ in range(12)])
 
     def forward(self, hidden_states, mask, past: List) -> Tuple[torch.Tensor, List]:
         presents = []
@@ -220,7 +219,7 @@ class TransformerDecoder(nn.Module):
     def __init__(self):
         super().__init__()
         self.embeddings = TransformerDecoderEmbeddings()
-        self.model = TransformerModel()
+        self.encoder = TransformerModel()
 
     def forward(self, input_ids, mask, past=None, past_length=None):
         """
@@ -251,7 +250,7 @@ class TransformerDecoder(nn.Module):
         embedding_output = self.embeddings(input_ids, past_length)
 
         # Transformer layer
-        last_layer_output, presents = self.model(embedding_output,
+        last_layer_output, presents = self.encoder(embedding_output,
                                                    mask,
                                                    past)
 
@@ -319,7 +318,7 @@ class TransformerEncoder(nn.Module):
     def __init__(self):
         super().__init__()
         self.embeddings = TransformerEncoderEmbeddings()
-        self.model = TransformerModel()
+        self.encoder = TransformerModel()
 
     def forward(self, input_ids, mask, token_type_ids=None, past=None):
         """
@@ -345,7 +344,7 @@ class TransformerEncoder(nn.Module):
             input_ids, past_length, token_type_ids)
 
         # Transformer layer
-        last_layer_output, presents = self.model(embedding_output,
+        last_layer_output, presents = self.encoder(embedding_output,
                                                    mask,
                                                    past)
 
