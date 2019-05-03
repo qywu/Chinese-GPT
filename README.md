@@ -6,6 +6,12 @@ This project is unidirectional transformer GPT model (117M) trained on a large c
 
 However, please notice that currently the performance still cannot match the original English GPT-2 model for various reasons. This can be that OpenAI has done better text filtering and has a dataset with better quality. Also, they have trained their model for about 300 GPU days at least. But the model here can be a good starting point if you want to apply it for substream tasks. 
 
+## Features
+
+This repository contains a rewritten cached Transformed based on BERT, which is the same technique used in GPT-2 implementation. It can cache the intermediate results, and therefore save the compuation time and memory during the decoding stage. 
+
+Also, a CUDA kenerl version of GELU activation function is provided. You have to insatll [Cupy](https://github.com/cupy/cupy) to use it. You can check [cuda_gelu](https://github.com/qywu/Chinese-GPT/blob/master/chinese_gpt/cuda_gelu.py) for the implementation.
+
 ## Installation 
 Before using it, you might want to install the requirements first.
 
