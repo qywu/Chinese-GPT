@@ -18,6 +18,10 @@ You can also install it via `pip`.
    ```bash
    pip install chinese-gpt
    ```
+   
+## Usage
+
+Check [tutorials](https://github.com/qywu/Chinese-GPT/tutorials) for details.
 
 ## Data Preparation
 To train GPT, it requires a dataset from a wide range of sources.
