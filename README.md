@@ -10,7 +10,7 @@ However, please notice that currently the performance still cannot match the ori
 
 This repository contains a rewritten cached Transformed based on BERT, which is the same technique used in GPT-2 implementation. It can cache the intermediate results, and therefore save the compuation time and memory during the decoding stage. 
 
-Also, a CUDA kenerl version of GELU activation function is provided. You have to insatll [Cupy](https://github.com/cupy/cupy) to use it. You can check [cuda_gelu](https://github.com/qywu/Chinese-GPT/blob/master/chinese_gpt/cuda_gelu.py) for the implementation.
+Also, a CUDA kernel version of GELU activation function is provided. You have to insatll [Cupy](https://github.com/cupy/cupy) to use it. You can check [cuda_gelu](https://github.com/qywu/Chinese-GPT/blob/master/chinese_gpt/cuda_gelu.py) for the implementation. It is 2x faster than the original implementation!
 
 ## Installation 
 Before using it, you might want to install the requirements first.
@@ -28,6 +28,8 @@ You can also install it via `pip`.
 ## Usage
 
 Check [tutorials](https://github.com/qywu/Chinese-GPT/tree/master/tutorials) for details.
+
+I have also included a colab for demo: https://colab.research.google.com/drive/1cvBSt2uF7hYL1feDGt0dkCxIeaVXQs5x
 
 ## Data Preparation
 To train GPT, it requires a dataset from a wide range of sources.
