@@ -12,8 +12,6 @@ This repository contains a rewritten cached Transformed based on BERT, which is 
 
 Also, a CUDA kernel version of GELU activation function is provided. You have to insatll [Cupy](https://github.com/cupy/cupy) to use it. You can check [cuda_gelu](https://github.com/qywu/Chinese-GPT/blob/master/chinese_gpt/cuda_gelu.py) for the implementation. It is 2x faster than the original implementation!
 
-Model weights https://drive.google.com/open?id=1W6n7Kv6kvHthUX18DhdGSzBYkyzDvxYh
-
 ## Installation 
 Before using it, you might want to install the requirements first.
 
@@ -32,6 +30,9 @@ You can also install it via `pip`.
 Check [tutorials](https://github.com/qywu/Chinese-GPT/tree/master/tutorials) for details.
 
 I have also included a colab for demo: https://colab.research.google.com/drive/1cvBSt2uF7hYL1feDGt0dkCxIeaVXQs5x
+
+Encoder Weights: https://drive.google.com/open?id=1Mr2-x_qT2hgyo0RalPjc09NmyNi6a_gs
+Decoder Weights: https://drive.google.com/open?id=1W6n7Kv6kvHthUX18DhdGSzBYkyzDvxYh
 
 ## Data Preparation
 To train GPT, it requires a dataset from a wide range of sources.
