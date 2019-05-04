@@ -1,11 +1,12 @@
 from setuptools import setup, find_packages
 
+
 with open("README.md", encoding='utf-8') as fh:
     long_description = fh.read()
 
 setup(
     name="chinese_gpt",
-    version="0.1.0",
+    version="0.1.2",
     author="Qingyang Wu",
     author_email="wilwu@ucdavis.edu",
     description="Chinese Generative Pre-Training Transformer",
@@ -18,4 +19,7 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
+    install_requires=['allennlp',
+                      'pytorch-pretrained-bert',
+                      'tqdm'],
 )
