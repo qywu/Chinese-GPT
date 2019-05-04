@@ -32,6 +32,7 @@ Check [tutorials](https://github.com/qywu/Chinese-GPT/tree/master/tutorials) for
 I have also included a colab for demo: https://colab.research.google.com/drive/1cvBSt2uF7hYL1feDGt0dkCxIeaVXQs5x
 
 Encoder Weights: https://drive.google.com/open?id=1Mr2-x_qT2hgyo0RalPjc09NmyNi6a_gs
+
 Decoder Weights: https://drive.google.com/open?id=1W6n7Kv6kvHthUX18DhdGSzBYkyzDvxYh
 
 ## Data Preparation
