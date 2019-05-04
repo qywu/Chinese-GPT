@@ -12,6 +12,8 @@ This repository contains a rewritten cached Transformed based on BERT, which is 
 
 Also, a CUDA kernel version of GELU activation function is provided. You have to insatll [Cupy](https://github.com/cupy/cupy) to use it. You can check [cuda_gelu](https://github.com/qywu/Chinese-GPT/blob/master/chinese_gpt/cuda_gelu.py) for the implementation. It is 2x faster than the original implementation!
 
+Model weights https://drive.google.com/open?id=1W6n7Kv6kvHthUX18DhdGSzBYkyzDvxYh
+
 ## Installation 
 Before using it, you might want to install the requirements first.
 
