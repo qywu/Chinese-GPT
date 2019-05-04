@@ -8,17 +8,17 @@ import warnings
 from typing import List, Tuple
 #pylint: disable=no-member
 
-try:
-    from .cuda_gelu import GELU
-    gelu = GELU()
-except:
-    warnings.warn(
-        "Try to install Cupy to enable CUDA gelu activation function!")
+# try:
+#     from .cuda_gelu import GELU
+#     gelu = GELU()
+# except:
+#     warnings.warn(
+#         "Try to install Cupy to enable CUDA gelu activation function!")
 
-    def gelu(x):
-        """Implementation of the gelu activation function.
-        """
-        return x * 0.5 * (1.0 + torch.erf(x * 0.707106781186547461715))
+def gelu(x):
+    """Implementation of the gelu activation function.
+    """
+    return x * 0.5 * (1.0 + torch.erf(x * 0.707106781186547461715))
 
 try:
     from apex.normalization import FusedLayerNorm as LayerNorm
@@ -196,7 +196,7 @@ class TransformerDecoderEmbeddings(nn.Module):
         super().__init__()
         self.word_embeddings = nn.Embedding(21128, 768)
         self.position_embeddings = nn.Embedding(512, 768)
-        # self.token_type_embeddings = nn.Embedding(2, 768)
+        self.token_type_embeddings = nn.Embedding(2, 768)
 
         self.LayerNorm = LayerNorm(768, eps=1e-12)
         self.dropout = nn.Dropout(0.1)

@@ -67,11 +67,12 @@ class GELU(torch.autograd.Function):
         return output.type(x.type())
 
     def backward(self, grad_output):
+        assert grad_output.is_contiguous()
         grad_input = grad_output.new(*grad_output.shape).float()
         n = grad_output.numel()
         
         cunnex('geluBackward')(
-            grid=((n + 1023) // 1024, 1, 1),
+            grid=((n + 1023) // 512, 1, 1),
             block=(1024, 1, 1),
             args=[grad_input.data_ptr(), grad_output.float().data_ptr(), self.saved.data_ptr(), n],
             stream=Stream
