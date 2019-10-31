@@ -29,9 +29,9 @@ Check [tutorials](https://github.com/qywu/Chinese-GPT/tree/master/tutorials) for
 
 I have also included a colab for demo: https://colab.research.google.com/drive/1cvBSt2uF7hYL1feDGt0dkCxIeaVXQs5x
 
-Encoder Weights: https://drive.google.com/open?id=1Mr2-x_qT2hgyo0RalPjc09NmyNi6a_gs
+Encoder Weights: https://drive.google.com/file/d/1Mr2-x_qT2hgyo0RalPjc09NmyNi6a_gs/view?usp=sharing
 
-Decoder Weights: https://drive.google.com/open?id=1W6n7Kv6kvHthUX18DhdGSzBYkyzDvxYh
+Decoder Weights: https://drive.google.com/file/d/1W6n7Kv6kvHthUX18DhdGSzBYkyzDvxYh/view?usp=sharing
 
 ## Data Preparation
 To train GPT, it requires a dataset from a wide range of sources.
